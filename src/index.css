@@ -1,13 +1,250 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #222831;
+  color: #eeeeee;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.main-container {
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  background: #393e46;
+  color: rgb(207, 204, 204);
+  padding: 0.3rem 0.75rem;
+  border-radius: 0.25rem;
+  border-color: transparent;
+  text-transform: capitalize;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.all {
+  padding: 5px 30px;
+  background-color: #3f72af;
+}
+
+.btn:hover {
+  background: hsl(205, 86%, 17%);
+  color: #f6f6f6;
+}
+
+header {
+  max-width: 80%;
+  margin: auto;
+}
+
+.source {
+  padding: 10px;
+  text-align: center;
+  background-color: #404655;
+}
+
+.sources-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: white;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding: 1rem 2rem;
+}
+
+input {
+  color: rgb(22, 22, 22);
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  background: rgb(194, 191, 191);
+  border-color: transparent;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding: 0.7rem 0.5rem;
+  width: 70%;
+}
+
+.input-btn {
+  padding: 0.6rem 0.5rem;
+  margin: 0;
+  background-color: #364f6b;
+}
+
+.news-cart-container {
+  padding: 20px 10px;
+  margin: auto;
+  width: 70%;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: 250px;
+  margin-top: 30px;
+  padding: 0;
+  position: relative;
+}
+
+img {
+  margin-top: 5px;
+  max-width: 300px;
+  height: 250px;
+}
+.cart-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  padding: 10px 15px;
+  margin: 0;
+  height: 100%;
+  background-color: #f9f7f7;
+  color: #222831;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.err-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 30px;
+}
+
+.read-more {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  display: inline;
+  color: #181d31;
+  font-size: large;
+  font-weight: 600;
+  /* background: #181d31; */
+  border-color: transparent;
+  color: #142f43;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.s-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.single-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.s-img-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  background-color: #181d31;
+}
+
+.s-img {
+  max-width: 500px;
+  max-height: 300px;
+}
+
+.desc-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  background-color: #112d4e;
+}
+
+.s-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.original-link {
+  padding: 10px 30px;
+  background-color: #142f43;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.home-link {
+  padding: 10px 30px;
+  background-color: #142f43;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+@media screen and (max-width: 860px) {
+  .cart {
+    flex-direction: column;
+    align-items: center;
+    justify-items: start;
+    height: auto;
+  }
 }
